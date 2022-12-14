@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vellogent</title>
+    <link rel="stylesheet" href="latsol3.css">
+    <link rel="shortcut icon" href="Vellogent Logo.ico" type="image/x-icon">
+</head>
+
+<body onload="NextQuestion(0)">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i>Beranda</a></li>
+                <li><a href="panduan.html"><i class="fa-solid fa-file-lines"></i>Panduan</a></li>
+            </ul>
+            <ul class="menu">
+                <li><a href="kelas.html"><i class="fa-solid fa-school-flag"></i>Kelas</a></li>
+                <li><a href="#"><i class="fa-solid fa-graduation-cap"></i>Latihan</a>
+                    <ul class="submenu">
+                        <li><a href="#">Kelas 1</a>
+                            <ul class="submenu2">
+                                <li><a href="latsol1.html">Semester 1</a></li>
+                                <li><a href="latsol2.html">Semester 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Kelas 2</a>
+                            <ul class="submenu2">
+                                <li><a href="#">Semester 1</a></li>
+                                <li><a href="latsol4.html">Semester 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Kelas 3</a>
+                            <ul class="submenu2">
+                                <li><a href="latsol5.html">Semester 1</a></li>
+                                <li><a href="latsol6.html">Semester 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Kelas 4</a>
+                            <ul class="submenu2">
+                                <li><a href="latsol7.html">Semester 1</a></li>
+                                <li><a href="latsol8.html">Semester 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Kelas 5</a>
+                            <ul class="submenu2">
+                                <li><a href="latsol9.html">Semester 1</a></li>
+                                <li><a href="latsol10.html">Semester 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Kelas 6</a>
+                            <ul class="submenu2">
+                                <li><a href="latsol11.html">Semester 1</a></li>
+                                <li><a href="latsol12.html">Semester 2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="tentang.html"><i class="fa-solid fa-user-group"></i>Tentang</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="modal-container" id="score-modal">
+            <div class="modal-content-container">
+                <h1>Selamat, anda telah menyelesaikan kuis.</h1>
+                <div class="grade-details">
+                    <p>soal : 10</p>
+                    <p>Salah : <span id="wrong-answers"></span></p>
+                    <p>Benar : <span id="right-answers"></span></p>
+                    <p>Nilai : <span id="grade-percentage"></span>%</p>
+                    <p><span id="remarks"></span></p>
+                </div>
+                <div class="modal-button-container">
+                    <button onclick="closeScoreModal()">Lanjut</button>
+                </div>
+            </div>
+        </div>
+        <div class="game-quiz-container">
+            <div class="game-details-container">
+                <h1>Score : <span id="player-score"></span> / 10</h1>
+                <h1> Soal : <span id="question-number"></span> / 10</h1>
+            </div>
+            <div class="game-question-container">
+                <h1 id="display-question"></h1>
+            </div>
+            <div class="game-options-container">
+                <div class="modal-container" id="option-modal">
+                    <div class="modal-content-container">
+                        <h1>Silahkan pilih jawaban terlebih dahulu</h1>
+                        <div class="modal-button-container">
+                            <button onclick="closeOptionModal()">lanjutkan</button>
+                        </div>
+                    </div>
+                </div>
+                <span>
+                    <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                    <label for="option-one" class="option" id="option-one-label"></label>
+                </span>
+                <span>
+                    <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                    <label for="option-two" class="option" id="option-two-label"></label>
+                </span>
+                <span>
+                    <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                    <label for="option-three" class="option" id="option-three-label"></label>
+                </span>
+                <span>
+                    <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                    <label for="option-four" class="option" id="option-four-label"></label>
+                </span>
+            </div>
+            <div class="next-button-container">
+                <button onclick="handleNextQuestion()">Cek!</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <button><a href="index.html">Kembali</a></button>
+    </div>
+    <script src="https://kit.fontawesome.com/b6c85559b1.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="latsol3.js"></script>
+</body>
+
+</html>
